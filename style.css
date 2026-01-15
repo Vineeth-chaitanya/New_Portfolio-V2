@@ -1,0 +1,308 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #fefefe;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  top: 200px;
+  left: 250px;
+  width: 500px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 4rem;
+  color: #1a1a1a;
+}
+
+h1 + p {
+  font-size: 1.4rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+main {
+  max-width: 800px;
+  margin-left: 1000px;
+  padding-top: 60px;
+}
+
+
+@media (max-width: 900px) {
+  header {
+    position: static;
+    width: auto;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  main {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.accent {
+    color: #4a7aff;
+    font-weight: 500;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.project {
+  margin-bottom: 40px;
+}
+
+.project h3 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  color: #0066cc;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fefefe;
+  color: #666;
+}
+
+#experience {
+  margin-bottom: 80px;
+}
+
+.experience-item {
+  margin-bottom: 40px;
+}
+
+.date {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.experience-item h3 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+}
+
+.experience-item h3 a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.experience-item h3 a:hover {
+  text-decoration: underline;
+}
+
+.experience-item p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.tech-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tech-list li {
+  background: #f4f5f5;
+  color: #0056b3;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 450;
+}
+
+#projects {
+  margin-bottom: 80px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.project-card {
+  position: relative;
+  background: #fefefe;          /* Light card background */
+  padding: 30px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.project-link {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0,0,0,0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-decoration: none;     /* ← Add this line */
+}
+
+.project-card:hover .project-link {
+  opacity: 1;
+}
+
+.project-link:hover {
+  text-decoration: none;     /* ← Optional, but safe */
+}
+
+
+.link-icon {
+  font-size: 1.2rem;
+  color: #0066cc;               /* Your accent color */
+}
+
+.project-card h3 {
+  margin: 0 0 15px;
+  font-size: 1.4rem;
+  color: #1a1a1a;
+}
+
+.project-card p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.social-sidebar.horizontal {
+  position: fixed;
+  bottom: 100px;                 /* Distance from bottom */
+  left: 320px;                   /* Matches your nav spacing */
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.social-sidebar.horizontal ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 30px;                     /* Space between icons */
+}
+
+.social-sidebar.horizontal li a {
+  display: block;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-sidebar.horizontal li a:hover {
+  opacity: 1;
+  transform: translateY(-6px) scale(1.1); /* Creative: lift + slight grow on hover */
+}
+
+.social-sidebar.horizontal img {
+  width: 28px;
+  height: 28px;
+  filter: grayscale(100%);
+}
+
+.social-sidebar.horizontal a:hover img {
+  filter: grayscale(0%);
+}
+
+.tag-active {
+  background: #d1f7d6;
+  color: #0f7b2d;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.neo-dot-pulse {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #4ade80;
+  display: inline-block;
+
+  /* move it slightly to the right */
+  margin-left: 12px;
+
+  /* soft glow */
+  box-shadow:
+    0 0 8px rgba(74, 222, 128, 0.6),
+    inset 0 0 4px rgba(255, 255, 255, 0.6);
+
+  /* animation */
+  animation: beat 1.6s ease-in-out infinite;
+
+  /* cursor change on hover */
+  cursor: pointer;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+    box-shadow:
+      0 0 8px rgba(74, 222, 128, 0.6),
+      inset 0 0 4px rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    transform: scale(1.25);
+    box-shadow:
+      0 0 14px rgba(74, 222, 128, 0.8),
+      inset 0 0 6px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 8px rgba(74, 222, 128, 0.6),
+      inset 0 0 4px rgba(255, 255, 255, 0.6);
+  }
+}
