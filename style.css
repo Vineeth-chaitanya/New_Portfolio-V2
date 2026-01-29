@@ -159,7 +159,7 @@ footer {
 }
 
 #projects {
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 
 .projects-grid {
@@ -345,4 +345,13 @@ footer {
 
 .resume-btn:hover {
   background: #0066cc;
+}
+
+
+.education-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.education-header {
+  margin-top: 0px; /* tighten as needed */
 }
