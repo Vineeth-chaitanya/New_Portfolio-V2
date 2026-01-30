@@ -15,9 +15,10 @@
 
   <main>
     <section id="about">
-      <p style="max-width: 700px;">I'm a data scientist who enjoys turning ideas into tools people actually rely on. Most of 
-        my work sits at the intersection of <span class="highlight">Machine Learning, Statistics and Large Language Models</span>. While I
-         focus on transforming messy, real-world data into systems that drive better decison-making.
+      <p style="max-width: 700px;">
+         I’m a data scientist focused on building machine-learning systems that hold up in the real world. 
+         My work spans <span class="highlight">machine learning, statistics, and large language models</span>, with an emphasis on turning complex, 
+         messy data into tools people can actually use.
       </p>
       <p style="max-width: 700px;">
         Currently, At <span class="accent">Pan American Health Organization</span>, I’m leveraging Large Language Models to build recommendation systems. I prioritize rigor at every stage: thoughtful engineering, 
@@ -25,7 +26,7 @@
       </p>
       <p style="max-width: 700px;">
         My path to Data Science began as a Data Analyst, which taught me how data flows through organizations and why clarity and 
-        reliability matter just as much as accuracy.This background, paired with my Master’s in Information Sciences, shapes my approach: I write readable code, 
+        reliability matter just as much as accuracy. This background, paired with my Master’s in Information Systems, shapes my approach: I write readable code, 
         ask practical questions, and build systems that are easy to maintain.
       </p>
       <p style="max-width: 700px;">
@@ -64,17 +65,12 @@
         <h3>
           <a href="https://thrivingelements.org/" target="_blank">Data Science Volunteer · Thriving Elements</a>
         </h3>
-        <p style="max-width: 700px;">At Thriving Elements, I worked across diverse participant profile data such as skills,
-          goals, availability, engagement patterns to strengthen the matching logic behind a large scale mentor
-          mentee program. I designed and operationalized a recommendation pipeline that combined TF-IFD vectorization, cosine similarity, and
-          Sentence-BERT embeddings indexed through FAISS to surface pairings that were both contextually aligned and program relevant.
+        <p style="max-width: 700px;">At Thriving Elements, I worked with mentor and mentee profile data including skills, interests, goals, and availability to improve the matching logic 
+          behind a large scale mentorship program. I built a recommendation prototype using TF-IDF vectorization and cosine similarity to reduce the manual effort required for participant pairing.
         </p>
         <p style="max-width: 700px;">
-          A major part of my work involved engineering clean, structured features using Python and SQL, validating semantic relevance through precision@3 and NDCG, and 
-          running controlled A/B tests to benchmark improvements over baseline heuristics. I collaborated closely with program managers
-          to refine matching criteria, incorporate real world constraints, and integrate feedback loops that aligned the system with evolving 
-          program needs. These efforts resulted in a more scalable, accurate and use centered matching experience
-          that improved satisfaction and reduced operational overhead.
+          I analyzed historical matching decisions and satisfaction survey data to identify patterns that informed improvements to the matching logic. Working closely with program staff, 
+          I refined matching rules and incorporated qualitative feedback into the system, helping align automated recommendations with real world program constraints and expectations.
         </p>
         <ul class="tech-list">
           <li>Python</li>
@@ -128,6 +124,10 @@
             This project builds a realistic simulation of California's rollout and uses causal off-policy evaluation
             to test alternative policies, revealing which strategies deliver the greatest reduction in population-level risk.
           </p>
+          <p style="max-width: 700px;">
+            I applied causal off-policy evaluation techniques, including propensity score estimation, to adjust for confounding in treatment assignment. 
+            By simulating counterfactual policies, the framework enables comparison of allocation strategies and identifies approaches that lead to greater reductions in population-level risk.
+          </p>
           <ul class="tech-list">
             <li>Causal Inference</li>
             <li>Statistical Modeling</li>
@@ -140,9 +140,12 @@
               <a href="https://github.com/Vineeth-chaitanya/Uplift-modeling-A-B-simulation" target="_blank" class="project-link">A/B Testing + Uplift Modeling</a>
             </h3>
             <p style="max-width: 700px;">
-              Most promotions waste money by targeting customers who don't need an incentive or won't respond to one. This 
-              Project uses Uplift modeling to pinpoint the customers whose behavior actually changes because of a promotional
-              banner, allowing the business to maximize incremental conversions and minimize wasted spend.
+             Many promotional campaigns waste spend by targeting customers who would convert without incentives or who are unlikely to respond at all. 
+             This project builds an end-to-end causal inference pipeline to estimate the incremental impact of a promotional banner on customer behavior.
+            </p>
+            <p style="max-width: 700px;">
+              Using transaction data from over 500,000 records, I engineered RFM features and validated the experimental setup through hypothesis testing. I applied a T-learner based uplift modeling approach to 
+              estimate individual treatment effects and segment customers by uplift deciles, revealing high value targets as well as “sleeping dogs” for whom promotions reduced conversion rates.
             </p>
             <ul class="tech-list">
                 <li>Python</li>
@@ -159,9 +162,12 @@
             <a href="https://github.com/Vineeth-chaitanya/AQI-Prediction" target="_blank" class="project-link">AQI Prediction</a>  
             </h3>
             <p style="max-width: 700px;">
-              Poor air quality forecasting limits a city's ability to issue timely health alerts. This project
-              builds a machine-learning pipeline that predicts AQI using meteorological and pollutant data,
-              enabling more accurate forecasts and earlier interventions for at-risk communities.
+              Accurate air quality forecasting is critical for issuing timely public health alerts, yet traditional approaches often struggle with short term variability. 
+              In this project, I built a machine learning pipeline to forecast temperature, ozone (O₃), and PM2.5 concentration levels using historical meteorological and pollutant data.
+            </p>
+            <p style="max-width: 700px;">
+              I applied time-series feature engineering with multi-day lag variables and evaluated multiple models, achieving consistent RMSE improvements across pollutants. 
+              Predicted pollutant levels were converted into EPA standard AQI values and visualized through an interactive Shiny dashboard, enabling 10-day forecasts and trend analysis across U.S. locations.
             </p>
             <ul class="tech-list">
                 <li>R</li>
